@@ -5,8 +5,8 @@ WORKDIR /app
 COPY requirements.txt /app
 COPY devops /app
 
-RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
+RUN sudo yum update && \
+    sudo yum install -y python3 python3-pip && \
     pip install -r requirements.txt && \
     cd devops
 
